@@ -112,20 +112,41 @@ let getRandom = function () {
     return random
 }
 
-let randomArray = function () {
-    let numArray = []
-    for (i = 0; i < 6; i++) {
-        setTimeout(function () {
-            numArray.push(getRandom())
-            console.log(numArray)
-        }, i*500);
-    }
-    return numArray;
-}
+// let randomArray = function () {
+//     let numArray = []
+//     for (i = 0; i < 6; i++) {
+//         setTimeout(function () {
+//             numArray.push(getRandom())
+//             console.log(numArray)
+//         }, i*500);
+//     }
+//     return numArray;
+// }
+
 
 let startButton = document.querySelector('#start-button')
 
-startButton.addEventListener('click', randomArray)
+let startAmy = function() {
+    setTimeout(getRandom, numArray.length*1000)
+    isEqual()
+}
+startButton.addEventListener('click', startAmy)
 
 //user input
-userArray = []
+let userArray = []
+let numArray = []
+
+//compare the user input to the numArray
+function isEqual() {
+    if (userArray.length != numArray.length)
+        return "you lost :[ ";
+    else {
+        for (var i = 0; i < userArray.length; i++) {
+            if (userArray[i] != numArray[i]) {
+                return "you lost :[ ";
+            }
+        }
+        return true;
+    }
+}
+
