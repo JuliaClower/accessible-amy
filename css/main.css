@@ -3,29 +3,33 @@
     height: 200px; 
     margin-bottom: 40px; 
 }
-.game-wrapper {
+#game-wrapper {
     display: flex; 
     justify-content: center; 
 }
-.token1 {
+#token1 {
     height: 150px;
     width: 150px; 
     background: palevioletred; 
     margin: 10px; 
 }
-.token2 {
+#number1 {
+    width: 40px; 
+}
+
+#token2 {
     height: 150px;
     width: 150px; 
     background: palegreen; 
     margin: 10px; 
 }
-.token3 {
+#token3 {
     height: 150px;
     width: 150px; 
     background: lightblue; 
     margin: 10px;  
 }
-.token4 {
+#token4 {
     height: 150px;
     width: 150px; 
     background: palegoldenrod; 
