@@ -1,6 +1,8 @@
 console.log("hi amy")
 
 //Token Click Events (sound and highlight)
+
+//click events for each button to show that shadow and then turn off
 const token1Button = document.querySelector('#token1')
 
 token1Button.addEventListener('click', function(){
@@ -77,5 +79,32 @@ const removeImages = () =>{
     $('#token4').html('')
 }
 
+//game logic below
+let getRandom = function(){
+    const min = 1
+    const max = 5
+    let random = Math.floor(Math.random() * (+max - +min)) + +min
+    console.log(random)
+    if(random === 1)
+    console.log('button1')
+    if(random === 2)
+    console.log('button2')
+    if(random === 3)
+    console.log('button3')
+    if(random === 4)
+    console.log('button4')
+}
 
+// let genColor = function(){
+//     if(random = 1)
+//     console.log('button1')
+//     if(random = 2)
+//     console.log('button2')
+//     if(random = 3)
+//     console.log('button3')
+//     if(random = 4)
+//     console.log('button4')
+// }
+
+getRandom()
 
