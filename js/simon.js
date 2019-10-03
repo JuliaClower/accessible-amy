@@ -6,24 +6,28 @@ console.log("hi amy")
 const token1Button = document.querySelector('#token1')
 
 token1Button.addEventListener('click', function () {
+    userArray.push(1)
     $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 })
 const token2Button = document.querySelector('#token2')
 
 token2Button.addEventListener('click', function () {
+    userArray.push(2)
     $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 })
 const token3Button = document.querySelector('#token3')
 
 token3Button.addEventListener('click', function () {
+    userArray.push(3)
     $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 })
 const token4Button = document.querySelector('#token4')
 
 token4Button.addEventListener('click', function () {
+    userArray.push(4)
     $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 })
@@ -122,3 +126,6 @@ let randomArray = function () {
 let startButton = document.querySelector('#start-button')
 
 startButton.addEventListener('click', randomArray)
+
+//user input
+userArray = []
