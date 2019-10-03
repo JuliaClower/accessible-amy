@@ -80,34 +80,45 @@ const removeImages = () => {
 }
 
 //game logic below
-let getRandom = function() {
+let getRandom = function () {
     const min = 1
     const max = 5
     let random = Math.floor(Math.random() * (+max - +min)) + +min
     console.log(random)
     if (random === 1) {
+        $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
+        setTimeout(turnOffShadow, 200)
         console.log('button1')
     }
     if (random === 2) {
+        $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
+        setTimeout(turnOffShadow, 200)
         console.log('button2')
     }
     if (random === 3) {
+        $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
+        setTimeout(turnOffShadow, 200)
         console.log('button3')
     }
     if (random === 4) {
+        $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
+        setTimeout(turnOffShadow, 200)
         console.log('button4')
     }
     return random
 }
 
 let randomArray = function () {
-    console.log('getRandom', getRandom)
     let numArray = []
     for (i = 0; i < 6; i++) {
-        numArray.push(getRandom())
-        console.log(numArray)
+        setTimeout(function () {
+            numArray.push(getRandom())
+            console.log(numArray)
+        }, i*500);
     }
     return numArray;
 }
 
-randomArray()
+let startButton = document.querySelector('#start-button')
+
+startButton.addEventListener('click', randomArray)
