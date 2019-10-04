@@ -90,16 +90,59 @@
     font-family: 'Lato', sans-serif;
     font-size: 18px; 
     height: 20px; 
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
 }
 .tri-di-chromatic {
     cursor: pointer; 
     font-family: 'Lato', sans-serif;
     font-size: 18px; 
     height: 20px;  
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 .physical {
     cursor: pointer; 
     font-family: 'Lato', sans-serif;
     font-size: 18px; 
     height:20px; 
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
+
+/* tooltip css is adapte from the w3schools website:
+https://www.w3schools.com/css/css_tooltip.asp */
+.monochromatic .mono-tooltip-text, .tri-di-chromatic .tri-di-tooltip-text, .physical .physical-tooltip-text {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -150px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .monochromatic:hover .mono-tooltip-text, .tri-di-chromatic:hover .tri-di-tooltip-text, .physical:hover .physical-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  .monochromatic .mono-tooltip-text:after, .tri-di-chromatic .tri-di-tooltip-text:after, .physical .physical-tooltip-text:after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
