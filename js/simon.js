@@ -190,6 +190,7 @@ let startButton = document.querySelector('#start-button')
 
 //this is the main game function. when the start button is clicked, it will run the main game. 
 let startAmy = function () {
+    document.querySelector('#youLost').style.opacity = "0.0";
     getRandom()
     runSequence()
     setTimeout(isEqual, ((numArray.length) * 1800))
