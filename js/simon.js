@@ -2,34 +2,47 @@ console.log("hi amy")
 
 //Token Click Events (sound and highlight)
 
+let toggle1 = function () {
+    $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
+    setTimeout(turnOffShadow, 200)
+}
+let toggle2 = function () {
+    $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
+    setTimeout(turnOffShadow, 200)
+}
+let toggle3 = function () {
+    $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
+    setTimeout(turnOffShadow, 200)
+}
+let toggle4 = function () {
+    $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
+    setTimeout(turnOffShadow, 200)
+}
+
 //click events for each button to show that shadow and then turn off
 const token1Button = document.querySelector('#token1')
 
-token1Button.addEventListener('click', function () {
+let button1 = token1Button.addEventListener('click', function () {
     userArray.push(1)
-    $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
-    setTimeout(turnOffShadow, 200)
+    toggle1()
 })
 const token2Button = document.querySelector('#token2')
 
-token2Button.addEventListener('click', function () {
+let button2 = token2Button.addEventListener('click', function () {
     userArray.push(2)
-    $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
-    setTimeout(turnOffShadow, 200)
+    toggle2()
 })
 const token3Button = document.querySelector('#token3')
 
-token3Button.addEventListener('click', function () {
+let button3 = token3Button.addEventListener('click', function () {
     userArray.push(3)
-    $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
-    setTimeout(turnOffShadow, 200)
+    toggle3()
 })
 const token4Button = document.querySelector('#token4')
 
-token4Button.addEventListener('click', function () {
+let button4 = token4Button.addEventListener('click', function () {
     userArray.push(4)
-    $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
-    setTimeout(turnOffShadow, 200)
+    toggle4()
 })
 
 const turnOffShadow = () => {
@@ -89,64 +102,63 @@ let getRandom = function () {
     const max = 5
     let random = Math.floor(Math.random() * (+max - +min)) + +min
     console.log(random)
-    if (random === 1) {
-        $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
-        setTimeout(turnOffShadow, 200)
-        console.log('button1')
-    }
-    if (random === 2) {
-        $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
-        setTimeout(turnOffShadow, 200)
-        console.log('button2')
-    }
-    if (random === 3) {
-        $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
-        setTimeout(turnOffShadow, 200)
-        console.log('button3')
-    }
-    if (random === 4) {
-        $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
-        setTimeout(turnOffShadow, 200)
-        console.log('button4')
-    }
+    numArray.push(random)
     return random
 }
 
-// let randomArray = function () {
-//     let numArray = []
-//     for (i = 0; i < 6; i++) {
-//         setTimeout(function () {
-//             numArray.push(getRandom())
-//             console.log(numArray)
-//         }, i*500);
-//     }
-//     return numArray;
-// }
-
+let runSequence = function () {
+    for (let i = 0; i < numArray.length; i++) {
+        setTimeout(function () {
+            console.log(numArray[i])
+            if (numArray[i] === 1) {
+                toggle1()
+            }
+            if (numArray[i] === 2) {
+                toggle2()
+            }
+            if (numArray[i] === 3) {
+                toggle3()
+            }
+            if (numArray[i] === 4) {
+                toggle4()
+            }
+        }, 500 * i
+        )
+    }
+}
 
 let startButton = document.querySelector('#start-button')
 
-let startAmy = function() {
-    setTimeout(getRandom, numArray.length*1000)
-    isEqual()
+let startAmy = function () {
+    getRandom()
+    runSequence()
+    setTimeout(isEqual, ((numArray.length) * 1800))
+    userArray = []
 }
+
 startButton.addEventListener('click', startAmy)
 
-//user input
+//user + CPU input
 let userArray = []
 let numArray = []
 
 //compare the user input to the numArray
 function isEqual() {
-    if (userArray.length != numArray.length)
-        return "you lost :[ ";
+    console.log('userArray', userArray)
+    console.log('numArray', numArray)
+    if (userArray.length !== numArray.length) {
+        console.log("you lost :[ ");
+        numArray = []
+    }
     else {
         for (var i = 0; i < userArray.length; i++) {
             if (userArray[i] != numArray[i]) {
-                return "you lost :[ ";
+                console.log("you lost :[ ");
+                return numArray = []
             }
         }
-        return true;
+        startAmy()
+        console.log('you won')
     }
 }
 
