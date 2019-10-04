@@ -19,6 +19,13 @@
     justify-content: space-between;
     font-family: 'Lato', sans-serif; 
 }
+#start-button {
+    border: 3px solid black;
+    width: 125px; 
+    text-align: center; 
+    line-height: 50px; 
+    height: 50px; 
+}
 #token1 {
     height: 150px;
     width: 150px; 
