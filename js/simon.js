@@ -90,10 +90,18 @@ const monoButton = document.querySelector('.monochromatic')
 
 changeToMono = () => {
     removeImages()
-    $('#token1').css("background-color", "black")
-    $('#token2').css("background-color", "gray")
-    $('#token3').css("background-color", "darkblue")
-    $('#token4').css("background-color", "darkgray")
+    $('#token1').css('border', '3px solid black')
+    $('#token1').css('background-image', 'radial-gradient(black 30%, transparent 0), radial-gradient(gray 30%, transparent 0)')
+    $('#token1').css('background-size', '30px 30px')
+    $('#token1').css('background-color', 'white')
+    $('#token1').css('background-position', '0 0, 15px 15px')
+    //polkadot code from https://codepen.io/danichk/pen/YyVeXa
+    $('#token2').css('background-image', 'repeating-linear-gradient(180deg, black, black 10px, white 10px, white 20px)')
+    $('#token2').css('border', '3px solid black')
+    $('#token3').css('background-image', 'repeating-linear-gradient(90deg, black, black 20px, white 20px, white 40px)')
+    $('#token3').css('border', '3px solid black')
+    $('#token4').css('border', '3px solid black')
+    $('#token4').css("background-color", "black")
     console.log("banana")
 }
 

@@ -19,28 +19,31 @@
     width: 150px; 
     background: palevioletred; 
     margin: 10px; 
+    border-radius: 50%;
 }
 #number1 {
     width: 40px; 
 }
-
 #token2 {
     height: 150px;
     width: 150px; 
     background: palegreen; 
     margin: 10px; 
+    border-radius: 50%;
 }
 #token3 {
     height: 150px;
     width: 150px; 
     background: lightblue; 
     margin: 10px;  
+    border-radius: 50%;
 }
 #token4 {
     height: 150px;
     width: 150px; 
     background: palegoldenrod; 
     margin: 10px; 
+    border-radius: 50%;
 
 }
 .footer {
