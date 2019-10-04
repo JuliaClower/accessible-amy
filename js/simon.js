@@ -6,6 +6,9 @@ var synth = new Tone.Synth().toMaster()
 //synth code from https://jsfiddle.net/yotammann/uLkcsrxn/?utm_source=website&utm_medium=embed&utm_campaign=uLkcsrxn
 
 
+//load the page with the "you lost" div invisible - this will become visible on the lose event
+document.onload = document.querySelector('#youLost').style.opacity = "0.0";
+
 //user toggle buttons showing purple background and playing sound
 let toggle1 = function () {
     synth.triggerAttackRelease('C4', '8n')
@@ -205,12 +208,14 @@ function isEqual() {
     console.log('numArray', numArray)
     if (userArray.length !== numArray.length) {
         console.log("you lost :[ ");
+        document.querySelector('#youLost').style.opacity = "100";
         numArray = []
     }
     else {
         for (var i = 0; i < userArray.length; i++) {
             if (userArray[i] != numArray[i]) {
                 console.log("you lost :[ ");
+                document.querySelector('#youLost').style.opacity = "100";
                 return numArray = []
             }
         }
