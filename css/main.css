@@ -11,12 +11,13 @@
     display: flex; 
     justify-content: center; 
 }
-#start-button {
-    height: 75px; 
-    width: 200px; 
-    background-color: maroon;
-    color: white; 
+#display-bar {
+    height: 50px;  
+    color: black; 
     font-size: 20px; 
+    display: flex; 
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif; 
 }
 #token1 {
     height: 150px;
