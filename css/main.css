@@ -20,6 +20,7 @@
     background: palevioletred; 
     margin: 10px; 
     border-radius: 50%;
+    border: 3px solid black;
 }
 #number1 {
     width: 40px; 
@@ -30,6 +31,7 @@
     background: palegreen; 
     margin: 10px; 
     border-radius: 50%;
+    border: 3px solid black;
 }
 #token3 {
     height: 150px;
@@ -37,6 +39,7 @@
     background: lightblue; 
     margin: 10px;  
     border-radius: 50%;
+    border: 3px solid black;
 }
 #token4 {
     height: 150px;
@@ -44,7 +47,7 @@
     background: palegoldenrod; 
     margin: 10px; 
     border-radius: 50%;
-
+    border: 3px solid black;
 }
 .footer {
     background-color: gray; 
