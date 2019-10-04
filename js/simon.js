@@ -19,6 +19,24 @@ let toggle4 = function () {
     setTimeout(turnOffShadow, 200)
 }
 
+let CPUtoggle1 = function () {
+    $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
+    setTimeout(turnOffShadow, 200)
+}
+let CPUtoggle2 = function () {
+    $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
+    setTimeout(turnOffShadow, 200)
+}
+let CPUtoggle3 = function () {
+    $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
+    setTimeout(turnOffShadow, 200)
+}
+let CPUtoggle4 = function () {
+    $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
+    setTimeout(turnOffShadow, 200)
+}
+
+
 //click events for each button to show that shadow and then turn off
 const token1Button = document.querySelector('#token1')
 
@@ -111,16 +129,16 @@ let runSequence = function () {
         setTimeout(function () {
             console.log(numArray[i])
             if (numArray[i] === 1) {
-                toggle1()
+                CPUtoggle1()
             }
             if (numArray[i] === 2) {
-                toggle2()
+                CPUtoggle2()
             }
             if (numArray[i] === 3) {
-                toggle3()
+                CPUtoggle3()
             }
             if (numArray[i] === 4) {
-                toggle4()
+                CPUtoggle4()
             }
         }, 500 * i
         )
