@@ -2,36 +2,46 @@ console.log("hi amy")
 
 //Token Click Events (sound and highlight)
 
+var synth = new Tone.Synth().toMaster()
+
 let toggle1 = function () {
+    synth.triggerAttackRelease('C4', '8n')
     $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 }
 let toggle2 = function () {
+    synth.triggerAttackRelease('B4', '8n')
     $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 }
 let toggle3 = function () {
+    synth.triggerAttackRelease('G4', '8n')
     $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 }
 let toggle4 = function () {
+    synth.triggerAttackRelease('A4', '8n')
     $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 }
 
 let CPUtoggle1 = function () {
+    synth.triggerAttackRelease('C4', '8n')
     $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
     setTimeout(turnOffShadow, 200)
 }
 let CPUtoggle2 = function () {
+    synth.triggerAttackRelease('B4', '8n')
     $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
     setTimeout(turnOffShadow, 200)
 }
 let CPUtoggle3 = function () {
+    synth.triggerAttackRelease('G4', '8n')
     $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
     setTimeout(turnOffShadow, 200)
 }
 let CPUtoggle4 = function () {
+    synth.triggerAttackRelease('A4', '8n')
     $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
     setTimeout(turnOffShadow, 200)
 }
