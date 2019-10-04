@@ -97,6 +97,7 @@ changeToMono = () => {
     //polkadot code from https://codepen.io/danichk/pen/YyVeXa
     $('#token2').css('background-image', 'repeating-linear-gradient(180deg, black, black 10px, white 10px, white 20px)')
     $('#token3').css('background-image', 'repeating-linear-gradient(90deg, black, black 20px, white 20px, white 40px)')
+    //adapted stripes from https://css-tricks.com/stripes-css/
     $('#token4').css("background-color", "black")
     console.log("banana")
 }
