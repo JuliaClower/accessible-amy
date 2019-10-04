@@ -3,7 +3,10 @@ console.log("hi amy")
 //Token Click Events (sound and highlight)
 
 var synth = new Tone.Synth().toMaster()
+//synth code from https://jsfiddle.net/yotammann/uLkcsrxn/?utm_source=website&utm_medium=embed&utm_campaign=uLkcsrxn
 
+
+//user toggle buttons showing purple background and playing sound
 let toggle1 = function () {
     synth.triggerAttackRelease('C4', '8n')
     $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
@@ -25,6 +28,7 @@ let toggle4 = function () {
     setTimeout(turnOffShadow, 200)
 }
 
+//CPU toggle buttons showing Red background and playing sound
 let CPUtoggle1 = function () {
     synth.triggerAttackRelease('C4', '8n')
     $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
@@ -73,6 +77,7 @@ let button4 = token4Button.addEventListener('click', function () {
     toggle4()
 })
 
+//function to turn the shadowbox off of each button
 const turnOffShadow = () => {
     $('#token1').css('box-shadow', 'none')
     $('#token2').css('box-shadow', 'none')
@@ -125,6 +130,8 @@ const removeImages = () => {
 }
 
 //game logic below
+
+//when run, this function will pull a random number between 1 and 4. 
 let getRandom = function () {
     const min = 1
     const max = 5
@@ -134,6 +141,8 @@ let getRandom = function () {
     return random
 }
 
+
+//when run, this function will go thru the current random number array and light-up the buttons
 let runSequence = function () {
     for (let i = 0; i < numArray.length; i++) {
         setTimeout(function () {
@@ -157,6 +166,7 @@ let runSequence = function () {
 
 let startButton = document.querySelector('#start-button')
 
+//this is the main game function. when the start button is clicked, it will run the main game. 
 let startAmy = function () {
     getRandom()
     runSequence()
