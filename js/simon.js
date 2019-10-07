@@ -219,14 +219,17 @@ let startAmy = function () {
     setTimeout(isEqual, ((numArray.length * 1000) + 1500))
     userArray = []
 }
-
-startButton.addEventListener('click', startAmy)
+let currentScore = 0
+let scoreDisplay = document.querySelector('#score')
+scoreDisplay.textContent = 'SCORE : ' + currentScore++
+startButton.addEventListener('click', startAmy);{
+    scoreDisplay.textContent = "SCORE : 0"
+}
 
 //user + CPU input
 let userArray = []
 let numArray = []
-let scoreDisplay = document.querySelector('#score')
-let currentScore = 0
+
 
 
 //compare the user input to the numArray
@@ -247,7 +250,7 @@ function isEqual() {
             }
         }
         startAmy()
-        scoreDisplay.textContent = 'SCORE:' + currentScore++
+        scoreDisplay.textContent = 'SCORE : ' + currentScore++
         console.log('you won')
     }
 }
