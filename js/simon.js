@@ -162,13 +162,9 @@ physicalButton.addEventListener('click', function () {
     $('#token3').css("background-color", "lightblue")
     $('#token4').css("background-color", "palegoldenrod")
     $('#token1').html('1')
-    $('#token2').html('<img id="number1" src="css/pictures/number2.png" />')
-    $('#token3').html('<img id="number1" src="css/pictures/number3.png" />')
-    $('#token4').html('<img id="number1" src="css/pictures/number4.png" />')
-    // $('#token1').html('<img id="number1" src="css/pictures/number1.png" />')
-    // $('#token2').html('<img id="number1" src="css/pictures/number2.png" />')
-    // $('#token3').html('<img id="number1" src="css/pictures/number3.png" />')
-    // $('#token4').html('<img id="number1" src="css/pictures/number4.png" />')
+    $('#token2').html('2')
+    $('#token3').html('3')
+    $('#token4').html('4')
 })
 
 const removeImages = () => {
