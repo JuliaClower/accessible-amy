@@ -41,7 +41,7 @@
     width: 150px; 
     background: palevioletred; 
     margin: 10px; 
-    border-radius: 90px 10px 10px 10px;
+    border-radius: 90px 5px 5px 5px;
     border: 3px solid black;
 }
 #number1 {
@@ -56,7 +56,7 @@
     width: 150px; 
     background: palegreen; 
     margin: 10px; 
-    border-radius: 10px 90px 10px 10px;
+    border-radius: 5px 90px 5px 5px;
     border: 3px solid black;
 }
 #token3 {
@@ -64,7 +64,7 @@
     width: 150px; 
     background: lightblue; 
     margin: 10px;  
-    border-radius: 10px 10px 10px 90px;
+    border-radius: 5px 5px 5px 90px;
     border: 3px solid black;
 }
 #token4 {
@@ -72,7 +72,7 @@
     width: 150px; 
     background: palegoldenrod; 
     margin: 10px; 
-    border-radius: 10px 10px 90px 10px;
+    border-radius: 5px 5px 90px 5px;
     border: 3px solid black;
 }
 .footer {

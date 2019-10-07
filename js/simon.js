@@ -56,28 +56,51 @@ let CPUtoggle4 = function () {
 
 //click events for each button to show that shadow and then turn off
 const token1Button = document.querySelector('#token1')
-
-let button1 = token1Button.addEventListener('click', function () {
+token1Button.addEventListener('click', function () {
     userArray.push(1)
     toggle1()
 })
-const token2Button = document.querySelector('#token2')
+document.addEventListener('keydown', function (event) {
+    if (event.which === 49) {
+        userArray.push(1)
+        toggle1()
+    }
+})
 
-let button2 = token2Button.addEventListener('click', function () {
+const token2Button = document.querySelector('#token2')
+token2Button.addEventListener('click', function () {
     userArray.push(2)
     toggle2()
 })
-const token3Button = document.querySelector('#token3')
+document.addEventListener('keydown', function (event) {
+    if (event.which === 50) {
+        userArray.push(2)
+        toggle2()
+    }
+})
 
-let button3 = token3Button.addEventListener('click', function () {
+const token3Button = document.querySelector('#token3')
+token3Button.addEventListener('click', function () {
     userArray.push(3)
     toggle3()
 })
-const token4Button = document.querySelector('#token4')
+document.addEventListener('keydown', function (event) {
+    if (event.which === 51) {
+        userArray.push(3)
+        toggle3()
+    }
+})
 
-let button4 = token4Button.addEventListener('click', function () {
+const token4Button = document.querySelector('#token4')
+token4Button.addEventListener('click', function () {
     userArray.push(4)
     toggle4()
+})
+document.addEventListener('keydown', function (event) {
+    if (event.which === 52) {
+        userArray.push(4)
+        toggle4()
+    }
 })
 
 //function to turn the shadowbox off of each button
@@ -202,6 +225,9 @@ startButton.addEventListener('click', startAmy)
 //user + CPU input
 let userArray = []
 let numArray = []
+let scoreDisplay = document.querySelector('#score')
+let currentScore = 0
+
 
 //compare the user input to the numArray
 function isEqual() {
@@ -221,6 +247,7 @@ function isEqual() {
             }
         }
         startAmy()
+        scoreDisplay.textContent = 'SCORE:' + currentScore++
         console.log('you won')
     }
 }
