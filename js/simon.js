@@ -161,10 +161,14 @@ physicalButton.addEventListener('click', function () {
     $('#token3').css('border', '3px solid black')
     $('#token3').css("background-color", "lightblue")
     $('#token4').css("background-color", "palegoldenrod")
-    $('#token1').html('<img id="number1" src="css/pictures/number1.png" />')
+    $('#token1').html('1')
     $('#token2').html('<img id="number1" src="css/pictures/number2.png" />')
     $('#token3').html('<img id="number1" src="css/pictures/number3.png" />')
     $('#token4').html('<img id="number1" src="css/pictures/number4.png" />')
+    // $('#token1').html('<img id="number1" src="css/pictures/number1.png" />')
+    // $('#token2').html('<img id="number1" src="css/pictures/number2.png" />')
+    // $('#token3').html('<img id="number1" src="css/pictures/number3.png" />')
+    // $('#token4').html('<img id="number1" src="css/pictures/number4.png" />')
 })
 
 const removeImages = () => {
@@ -227,9 +231,12 @@ scoreDisplay.textContent = 'SCORE : ' + currentScore++
 
 startButton.addEventListener('click', function() {
     startAmy()
+    document.getElementById('score').style.WebkitAnimationPlayState = 'paused';
+    document.getElementById('start-button').style.WebkitAnimationPlayState = 'paused';
     currentScore = 0
     scoreDisplay.textContent = 'SCORE : ' + currentScore++
 })
+
 //user + CPU input
 let userArray = []
 let numArray = []
@@ -240,6 +247,8 @@ function isEqual() {
     console.log('numArray', numArray)
     if (userArray.length !== numArray.length) {
         console.log("you lost :[ ");
+        document.getElementById('score').style.WebkitAnimationPlayState = 'running';
+        document.getElementById('start-button').style.WebkitAnimationPlayState = 'running';
         document.querySelector('#youLost').style.opacity = "100";
         numArray = []
     }
@@ -247,6 +256,8 @@ function isEqual() {
         for (var i = 0; i < userArray.length; i++) {
             if (userArray[i] != numArray[i]) {
                 console.log("you lost :[ ");
+                document.getElementById('score').style.WebkitAnimationPlayState = 'running';
+                document.getElementById('start-button').style.WebkitAnimationPlayState = 'running';
                 document.querySelector('#youLost').style.opacity = "100";
                 return numArray = []
             }

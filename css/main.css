@@ -44,12 +44,17 @@
     border-radius: 90px 5px 5px 5px;
     border: 3px solid black;
 }
+#token1:active {
+    background:rgb(155, 77, 103); 
+    transform: translateY(4px);
+}
 #number1 {
     display: block; 
     width: 60px; 
     margin-left: auto;
     margin-right: auto; 
     margin-top: 25px; 
+    box-shadow: 0 9px #999
 }
 #token2 {
     height: 150px;
@@ -59,6 +64,10 @@
     border-radius: 5px 90px 5px 5px;
     border: 3px solid black;
 }
+#token2:active {
+    background: rgb(111, 173, 111); 
+    transform: translateY(4px);
+}
 #token3 {
     height: 150px;
     width: 150px; 
@@ -67,6 +76,10 @@
     border-radius: 5px 5px 5px 90px;
     border: 3px solid black;
 }
+#token3:active {
+    background: rgb(96, 168, 192); 
+    transform: translateY(4px);
+}
 #token4 {
     height: 150px;
     width: 150px; 
@@ -74,6 +87,24 @@
     margin: 10px; 
     border-radius: 5px 5px 90px 5px;
     border: 3px solid black;
+}
+#token4:active {
+    background: rgb(182, 174, 86); 
+    transform: translateY(4px);
+}
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(60, 216, 182, 0.829);
+     }
+     100% {
+          box-shadow: 0 0 10px 20px rgba(94, 235, 205, 0.137);
+     }
+}
+#score, #start-button {
+    animation: shadow-pulse 2s infinite;
+    animation-direction: alternate;
+    animation-play-state: paused; 
 }
 .footer {
     box-shadow: inset 0px 24px 3px -24px gray;
