@@ -200,3 +200,29 @@ https://www.w3schools.com/css/css_tooltip.asp */
     border-style: solid;
     border-color: black transparent transparent transparent;
   }
+
+  @media only screen and (max-width: 480px) {
+    * {
+        margin: 0 auto; 
+        text-align: center; 
+        max-width: 100%;
+    }
+    .heading {
+        font-size: 40px; 
+        height: 100px;
+        line-height: 100px; 
+    }
+    #display-bar {
+        font-size: 15px; 
+        margin-bottom: 20px; 
+    }
+    #start-button {
+        margin: 5px; 
+    }
+    #score {
+        margin: 5px; 
+    }
+    .tri-di-chromatic, .monochromatic, .physical {
+        font-size: 15px; 
+    }
+  }
