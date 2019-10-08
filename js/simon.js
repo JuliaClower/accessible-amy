@@ -209,6 +209,8 @@ let startButton = document.querySelector('#start-button')
 //this is the main game function. when the start button is clicked, it will run the main game. 
 let startAmy = function () {
     document.querySelector('#youLost').style.opacity = "0.0";
+    document.getElementById('score').className = '';
+    document.getElementById('start-button').className = '';
     getRandom();
     runSequence();
     setTimeout(isEqual, ((numArray.length * 1000) + 1500))
@@ -220,7 +222,7 @@ let currentScore = 0
 let scoreDisplay = document.querySelector('#score')
 scoreDisplay.textContent = 'SCORE : ' + currentScore++
 
-startButton.addEventListener('click', function() {
+startButton.addEventListener('click', function () {
     startAmy()
     //document.getElementById('score').style.WebkitAnimationPlayState = 'paused';
     //document.getElementById('start-button').style.WebkitAnimationPlayState = 'paused';
@@ -238,8 +240,8 @@ function isEqual() {
     console.log('numArray', numArray)
     if (userArray.length !== numArray.length) {
         console.log("you lost :[ ");
-        document.getElementById('score').style.WebkitAnimationPlayState = 'running';
-        document.getElementById('start-button').style.WebkitAnimationPlayState = 'running';
+        document.getElementById('score').className = 'pulse';
+        document.getElementById('start-button').className = 'pulse';
         document.querySelector('#youLost').style.opacity = "100";
         numArray = []
     }
@@ -247,8 +249,8 @@ function isEqual() {
         for (var i = 0; i < userArray.length; i++) {
             if (userArray[i] != numArray[i]) {
                 console.log("you lost :[ ");
-                document.getElementById('score').style.WebkitAnimationPlayState = 'running';
-                document.getElementById('start-button').style.WebkitAnimationPlayState = 'running';
+                document.getElementById('score').className = 'pulse';
+                document.getElementById('start-button').className = 'pulse';
                 document.querySelector('#youLost').style.opacity = "100";
                 return numArray = []
             }
