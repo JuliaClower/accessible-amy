@@ -11,44 +11,44 @@ document.onload = document.querySelector('#youLost').style.opacity = "0.0";
 
 //user toggle buttons showing purple background and playing sound
 let toggle1 = function () {
-    synth.triggerAttackRelease('C4', '8n')
+    synth.triggerAttackRelease('D4', '8n')
     $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 }
 let toggle2 = function () {
-    synth.triggerAttackRelease('B4', '8n')
+    synth.triggerAttackRelease('E4', '8n')
     $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 }
 let toggle3 = function () {
-    synth.triggerAttackRelease('G4', '8n')
+    synth.triggerAttackRelease('F4', '8n')
     $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 }
 let toggle4 = function () {
-    synth.triggerAttackRelease('A4', '8n')
+    synth.triggerAttackRelease('G4', '8n')
     $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(30,30,189,1)')
     setTimeout(turnOffShadow, 200)
 }
 
 //CPU toggle buttons showing Red background and playing sound
 let CPUtoggle1 = function () {
-    synth.triggerAttackRelease('C4', '8n')
+    synth.triggerAttackRelease('D4', '8n')
     $('#token1').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
     setTimeout(turnOffShadow, 200)
 }
 let CPUtoggle2 = function () {
-    synth.triggerAttackRelease('B4', '8n')
+    synth.triggerAttackRelease('E4', '8n')
     $('#token2').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
     setTimeout(turnOffShadow, 200)
 }
 let CPUtoggle3 = function () {
-    synth.triggerAttackRelease('G4', '8n')
+    synth.triggerAttackRelease('F4', '8n')
     $('#token3').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
     setTimeout(turnOffShadow, 200)
 }
 let CPUtoggle4 = function () {
-    synth.triggerAttackRelease('A4', '8n')
+    synth.triggerAttackRelease('G4', '8n')
     $('#token4').css('box-shadow', '0px 0px 83px 3px rgba(255,0,0,1)')
     setTimeout(turnOffShadow, 200)
 }
@@ -125,7 +125,6 @@ changeToMono = () => {
     $('#token3').css('background-image', 'repeating-linear-gradient(90deg, black, black 20px, white 20px, white 40px)')
     //adapted stripes from https://css-tricks.com/stripes-css/
     $('#token4').css("background-color", "black")
-    console.log("banana")
 }
 
 monoButton.addEventListener('click', changeToMono)
@@ -134,6 +133,7 @@ const triDiButton = document.querySelector('.tri-di-chromatic')
 
 triDiButton.addEventListener('click', function () {
     removeImages()
+    $('#token1').css('background-color', 'palevioletred')
     $('#token1').css('background-image', '')
     $('#token1').css('background-size', '')
     $('#token1').css('background-position', '')
@@ -141,11 +141,13 @@ triDiButton.addEventListener('click', function () {
     $('#token2').css('border', '3px solid black')
     $('#token3').css('background-image', '')
     $('#token3').css('border', '3px solid black')
+    $('#token4').css('background-color', 'palegoldenrod')
 })
 
 const physicalButton = document.querySelector('.physical')
 
 physicalButton.addEventListener('click', function () {
+    $('#token1').css('background-color', 'palevioletred')
     $('#token1').css('background-image', '')
     $('#token1').css('background-size', '')
     $('#token1').css('background-position', '')
@@ -157,6 +159,7 @@ physicalButton.addEventListener('click', function () {
     $('#token2').html('2')
     $('#token3').html('3')
     $('#token4').html('4')
+    $('#token4').css('background-color', 'palegoldenrod')
 })
 
 const removeImages = () => {
@@ -219,8 +222,8 @@ scoreDisplay.textContent = 'SCORE : ' + currentScore++
 
 startButton.addEventListener('click', function() {
     startAmy()
-    document.getElementById('score').style.WebkitAnimationPlayState = 'paused';
-    document.getElementById('start-button').style.WebkitAnimationPlayState = 'paused';
+    //document.getElementById('score').style.WebkitAnimationPlayState = 'paused';
+    //document.getElementById('start-button').style.WebkitAnimationPlayState = 'paused';
     currentScore = 0
     scoreDisplay.textContent = 'SCORE : ' + currentScore++
 })

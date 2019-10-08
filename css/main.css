@@ -41,6 +41,7 @@
     width: 150px; 
     background: palevioletred; 
     margin: 10px; 
+    margin-bottom: 20px; 
     border-radius: 90px 5px 5px 5px;
     border: 3px solid black;
     font-family: 'Lato', sans-serif;
@@ -65,6 +66,7 @@
     width: 150px; 
     background: palegreen; 
     margin: 10px; 
+    margin-bottom: 20px; 
     border-radius: 5px 90px 5px 5px;
     border: 3px solid black;
     font-family: 'Lato', sans-serif;
@@ -115,6 +117,15 @@
      }
      100% {
           box-shadow: 0 0 10px 20px rgba(94, 235, 205, 0.137);
+     }
+}
+@keyframes no-shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px white;
+     }
+     100% {
+          box-shadow: 0 0 10px 20px white;
      }
 }
 #score, #start-button {
