@@ -9,10 +9,18 @@ The theme of Accessible Amy is to allow individuals with disabilities to enjoy t
 [This is a link to the live site.](https://pensive-wiles-dda265.netlify.com/)
 
 ## Technologies Used
-
+- Languages - HTML5, CSS, Javascript, jQuery
+- Google Fonts
+- [Trello](https://trello.com/b/kWWvGabt/project-i-simon)
 
 ## Features
-
+- Three play settings - Monochromatic, Di/Trichromatic, Physical Mode
+- Scoreboard keeps score for each round
+- Start button restarts the game and resets the score
+- Animations on Click
+- Sound for each button
 
 ## Wireframe and Flow Diagram
-(https://git.generalassemb.ly/JuliaClower/Project-I-AccessibleAmy/blob/master/img/flow.jpg)
+![Wireframe](https://git.generalassemb.ly/JuliaClower/Project-I-AccessibleAmy/blob/master/img/flow.jpg)
+
+![Flow](https://git.generalassemb.ly/JuliaClower/Project-I-AccessibleAmy/blob/master/img/flow.jpg)
