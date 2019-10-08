@@ -19,6 +19,7 @@ The theme of Accessible Amy is to allow individuals with disabilities to enjoy t
 - Start button restarts the game and resets the score
 - Animations on Click
 - Sound for each button
+- Mobile compatible
 
 ## Wireframe and Flow Diagram
 ![Wireframe](https://git.generalassemb.ly/JuliaClower/Project-I-AccessibleAmy/blob/master/img/flow.jpg)
