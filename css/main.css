@@ -127,7 +127,8 @@
 }
 
 .pulse{
-    animation: shadow-pulse 2s infinite;
+    animation: shadow-pulse 1.5s infinite;
+    animation-direction: alternate; 
 }
 .footer {
     box-shadow: inset 0px 24px 3px -24px gray;
