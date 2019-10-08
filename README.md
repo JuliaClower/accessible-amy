@@ -15,3 +15,4 @@ The theme of Accessible Amy is to allow individuals with disabilities to enjoy t
 
 
 ## Wireframe and Flow Diagram
+(https://git.generalassemb.ly/JuliaClower/Project-I-AccessibleAmy/blob/master/img/flow.jpg)
