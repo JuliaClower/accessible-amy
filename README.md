@@ -25,3 +25,5 @@ The theme of Accessible Amy is to allow individuals with disabilities to enjoy t
 ![Wireframe](https://git.generalassemb.ly/JuliaClower/Project-I-AccessibleAmy/blob/master/img/flow.jpg)
 
 ![Flow](https://git.generalassemb.ly/JuliaClower/Project-I-AccessibleAmy/blob/master/img/flow.jpg)
+
+![MobileView](https://git.generalassemb.ly/JuliaClower/Project-I-AccessibleAmy/blob/master/img/mobileview.jpeg)
